@@ -27,7 +27,7 @@ body, .app {
 }
 
 .bookshelf {
-  padding: 0 10px 20px;
+  padding: 0 1px 20px;
 }
 
 @media (min-width: 600px) {
@@ -53,8 +53,8 @@ body, .app {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #2e7d32;
-  background-image: url('./icons/add.svg');
+  background: #000000;
+  background-image: url('./icons/add-new-book.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
@@ -62,11 +62,59 @@ body, .app {
   font-size: 0;
 }
 
+/*Notificatons*/
+
+.notifications .books{
+  width: 60px;
+  height: 40px;
+  border-radius: 5%;
+  /* background-image: url('images/notifications.jpg'); */
+  right: 34px;
+  padding: 5px 10px;
+  z-index: 100;
+  position: fixed;
+  background-color: rgb(22, 22, 53);
+  color: rgb(0, 202, 252);
+}
+.notifications .size{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px 5px;
+  z-index: 100;
+  position: fixed;
+  color: rgb(8, 252, 0);
+  font-weight: 100;
+  background:rgb(192, 38, 0);
+  color: rgb(255, 255, 255);
+  top: 22px;
+  right: 19px
+}
+
+.notifications span {
+  box-shadow: 2px 3px 33px gray
+}
+
+
+.notifications *:focus,
+.notifications *:hover{
+  background-color: rgb(10, 10, 14);
+}
+
 /* search page */
+.no-found{
+  color: red;
+  font-size: 33px
+}
+
+.find-a-query {
+  border-radius: 12px;
+  height: 50px
+}
 
 .search-books-bar {
   position: fixed;
-  width: 100%;
+  width: 95%;
   top: 0;
   left: 0;
   z-index: 5;
@@ -75,14 +123,15 @@ body, .app {
 }
 .search-books-input-wrapper {
   flex: 1;
-  background: #e9e;
+  background: rgb(199, 23, 0);
 }
 .search-books-bar input {
   width: 100%;
-  padding: 15px 10px;
+  padding: 10px 10px;
   font-size: 1.25em;
   border: none;
   outline: none;
+  border-left: 1px ridge gray
 }
 
 .close-search {
@@ -91,12 +140,18 @@ body, .app {
   left: 15px;
   width: 50px;
   height: 53px;
-  background: white;
+  background: rgb(207, 0, 0);
   background-image: url('./icons/arrow-back.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
   font-size: 0;
+}
+
+.close-search:hover,
+.close-search:focus{
+  color: white;
+  background-color: rgb(189, 3, 3);
 }
 
 .search-books-results {
@@ -166,9 +221,13 @@ body, .app {
 .book-cover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #eee;
+  width: 128px;
+  height: 188px;
 }
 .book-cover-title {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
 }
+
+
