@@ -4,11 +4,11 @@
 
 This project is built with [ReactJS.org](). The purpose of the project was kind of builduing a eCommerce application even though it was not the case for this project.
 How it works, the user has to click to the ``add book``' button icon to search for a book as the following picture shows:
-![Add a book](/images/add-a-book.png)
+![Add a book](images/add-a-book.png)
 
 Once the user has clicked, it will be directed to search page. This how it should look like:
 
-![Search page](/images/search-page.png)
+![Search page](images/search-page.png)
 
 Now the use will have to click on the down-arrow to select which shelf on the main he's going to place the selected book(s)
 
@@ -18,7 +18,7 @@ The notification's icon on the top tells the user how many books he's added to h
 
 Last is when the user has mispelled the name of the, the application will display as follows:
 
-![No match in our database](/images/sorry-not-found.png)
+![No match in our database](images/sorry-not-found.png)
 
 Dependencies:
 
@@ -28,8 +28,8 @@ This project was one of the kind to be honest, but I'm thankful because I learne
 
 *   
 *   First download and install [NodeJS](https://reactjs.org)
-*   `git clone ` 
-*   `cd My-Reads-full-stack-developer`
+*   `git clone https://github.com/bjanvier/reactnd-project-myreads-starter.git` 
+*   `cd reactnd-project-myreads-starter`
 *   On your command-line, run: `npm install`, which will install npm
 *   `npm start`
 
