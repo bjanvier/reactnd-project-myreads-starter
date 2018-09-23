@@ -16,7 +16,8 @@ class ListBooks extends Component {
  
 
   render() {
-    const updatedShelves = [];
+  const {book} = this.props;
+  const updatedShelves = [];
         updatedShelves.push(
           <div>
             {shelfOptions.map( shelf =>  {
@@ -43,7 +44,12 @@ class ListBooks extends Component {
         <div className="list-books-title">
               <h1>MyReads</h1>
           </div>
-          {updatedShelves}
+          {shelfOptions.forEach( shelf =>
+             <div key={shelf.value}>
+                {updatedShelves}
+            </div>
+          )}
+        
       </div>
           <nav className="open-search">
              <Link title='Add new book here...' to="/search">Add a book</Link>

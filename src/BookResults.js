@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import React from 'react';
 
 
 const shelfOptions = 
@@ -12,37 +11,37 @@ const shelfOptions =
 
 
 
-class BookResults extends Component {
-  render() {
-    const { book, books, movingBooks } = this.props
-    let allShelvesUpdated =[], authorAndTitle = [];
+// class BookResults extends Component {
 
-  
+const BookResults = (props) => {
+//   render() {
+    // const { book, books, movingBooks } = this.props
+    let allShelvesUpdated =[], authorAndTitle = [];
   
     /**
      * We're allowing the new books to update with 
      * the current value of shelf in main page
      */
-let bookOnMainpage = 0, currentShelf
+let i = 0, currentShelf
 do 
    {
-      if (!(books[bookOnMainpage].id === book.id))  {
+      if (!(props.books[i].id === props.book.id))  {
         currentShelf = 'none';
     } else {
-         currentShelf = books[bookOnMainpage].shelf;
+         currentShelf = props.books[i].shelf;
         break;
       }
-     bookOnMainpage++
+     i++
     
-    } while ( bookOnMainpage < books.length) ;
+    } while ( i < props.books.length) ;
    
 
 //object holding the props we'll need to move
 // the book around different shelves
 const ourSelectedProps ={
-  onChange:e => movingBooks(book, e.target.value),
+  onChange:e => props.movingBooks(props.book, e.target.value),
   defaultValue : currentShelf,
-  key: book.id,
+  key: props.book.id,
   title :'toggle to move or remove the book'
 }
 
@@ -55,7 +54,7 @@ allShelvesUpdated.push(
 <form className="book-shelf-changer">
         <label>
              <select  {...ourSelectedProps} >
-                  <option key={book.id} disabled>Move to...</option> {/*placeholder*/}
+                  <option key={props.book.id} disabled>Move to...</option> {/*placeholder*/}
                  {/* we append the option </> each the book */}
                   {shelfOptions.map( shelf =>  
                   <option key={shelf.value} value={shelf.value ? shelf.value : 'none'}>
@@ -72,10 +71,10 @@ allShelvesUpdated.push(
             authorAndTitle.push(
                     <div>
                         <label>
-                            <h4 className='book-title'>{!false ? book.title : 'Not title available'} </h4> 
+                            <h4 className='book-title'>{!false ? props.book.title : 'Not title available'} </h4> 
                         </label>
                         <label>
-                            <h4 className='book-authors'>{!false ? book.authors : `We cannot find the ${book.authors}'s name`}</h4>
+                            <h4 className='book-authors'>{!false ? props.book.authors : `We cannot find the ${props.book.authors}'s name`}</h4>
                         </label>
                     </div>
                 )                  
@@ -88,7 +87,7 @@ allShelvesUpdated.push(
         <li>
              <section tabIndex='0' className="book">
                 <article className="book-top">
-                <img className="book-cover" style={{ width: 130, height: 190, }} src={book.imageLinks ? book.imageLinks.thumbnail:'' } alt={false ? `The cover for ${book.title}` : `The cover of ${book.title} is not available` }/>
+                <img className="book-cover" style={{ width: 130, height: 190, }} src={props.book.imageLinks ? props.book.imageLinks.thumbnail:'' } alt={false ? `The cover for ${props.book.title}` : `The cover of ${props.book.title} is not available` }/>
                     {allShelvesUpdated}
                 </article>
                  <article><br/>
@@ -97,12 +96,5 @@ allShelvesUpdated.push(
             </section>
      </li>
     )
-  }
-
-  static propTypes = {
-    movingBooks: PropTypes.func.isRequired,
-    book: PropTypes.object.isRequired,
-    books: PropTypes.array.isRequired,
-  }
 }
 export default BookResults
