@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'
 
 const shelfOptions = 
 [ 
@@ -96,5 +96,11 @@ allShelvesUpdated.push(
             </section>
      </li>
     )
+
 }
+BookResults.propTypes = {
+    movingBooks: PropTypes.func.isRequired,
+    book: PropTypes.object.isRequired,
+    books: PropTypes.array.isRequired,
+  }
 export default BookResults
