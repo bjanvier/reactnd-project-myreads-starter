@@ -46,7 +46,7 @@ class ListBooks extends Component {
           {updatedShelves}
       </div>
           <nav className="open-search">
-             <Link to="/search">Add a book</Link>
+             <Link title='Add new book here...' to="/search">Add a book</Link>
           </nav>
       </div>
     )
