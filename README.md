@@ -10,19 +10,19 @@ Once the user has clicked, it will be directed to search page. This how it shoul
 
 ![Search page](src/images/search-page.png)
 
-Now the use will have to click on the down-arrow to select which shelf on the main he's going to place the selected book(s)
+Now the user will have to click on the green down-arrow cicrle on the bottom-right of the book to select which shelf on the main he's going to place the selected book(s)
 
 
-The notification's icon on the top tells the user how many books he's added to his main main page!
+The notification's icon on the top tells the user how many books he's added to his main page!
 
 
-Last is when the user has mispelled the name of the, the application will display as follows:
+Last is when the user has mispelled the name of the query, the application will display as follows to warn him:
 
 ![No match in our database](src/images/sorry-not-found.png)
 
 Dependencies:
 
-This project was one of the kind to be honest, but I'm thankful because I learned so much. [React is so awesome](https://reactjs.org)! I used Google most of the time for the things I couldn't fully understand in [Udacity's Front-End Developer classroom](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). The best yet to come!!
+This project was one of the kind to be honest, but I'm thankful because I learned so much. [React is so awesome](https://reactjs.org)! I used Google most of the time for the things I couldn't fully understand in [Mobile Web Specialist's classroom](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). The best yet to come!!
 
 ## TO run this application, MAKE THESE FEW COMMANDS:
 
@@ -36,6 +36,15 @@ This project was one of the kind to be honest, but I'm thankful because I learne
 ### That's all, the last thing you will do is to have fun with the application in local server at : 
 [http://localhost:3000/](http://localhost:3000/)
 
+You browser should look like this if you've installed everything:
+
+![Homepage ](src/images/homepage.png)
+
+
+### This is what was required:
+
+
+![Correct use of state ](src/images/correct-use-of-state.gif)
 
 
 ## Starter code

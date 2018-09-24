@@ -13,11 +13,11 @@ import TheShelves from './TheShelves'
    
 class ListBooks extends Component {
   state = { movingBooks: 0 }
- 
 
   render() {
-  const {book} = this.props;
   const updatedShelves = [];
+ let valueKey = this.props.books.map(book => book.key)
+
         updatedShelves.push(
           <div>
             {shelfOptions.map( shelf =>  {
@@ -44,12 +44,9 @@ class ListBooks extends Component {
         <div className="list-books-title">
               <h1>MyReads</h1>
           </div>
-          {shelfOptions.forEach( shelf =>
-             <div key={shelf.value}>
+             <div key={valueKey}>
                 {updatedShelves}
             </div>
-          )}
-        
       </div>
           <nav className="open-search">
              <Link title='Add new book here...' to="/search">Add a book</Link>
